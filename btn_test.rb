@@ -38,8 +38,8 @@ class BtnTest < Minitest::Test
 
     result = Btn.calculate_unit_price(pu_ant, tr)
 
-    assert_equal (result - 1.9) <= EPS, false
-    assert_in_delta 1.0, result, EPS, "quebrou 1"
+    assert_equal (result - 1.9).abs <= EPS, false
+    assert_in_delta 1.0, result, EPS
   end
 
 end
