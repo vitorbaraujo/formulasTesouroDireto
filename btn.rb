@@ -9,7 +9,7 @@ class Btn
   end
 
   def self.calculate_interest pu_at, fj
-    205.797399
+    pu_at * fj
   end
 
 end
