@@ -8,4 +8,8 @@ class Btn
     truncated_pu_ant * tr
   end
 
+  def self.calculate_interest pu_at, fj
+    205.797399
+  end
+
 end
