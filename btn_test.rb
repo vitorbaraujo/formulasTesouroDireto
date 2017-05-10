@@ -42,4 +42,12 @@ class BtnTest < Minitest::Test
     assert_in_delta 1.0, result, EPS
   end
 
+  def test_should_calculate_interest
+    pu_at = 115.000000
+    fj = 1.78954260
+    result = Btn.calculate_interest(pu_at, fj)
+
+    assert_equal 205.797399, result 
+  end
+
 end
