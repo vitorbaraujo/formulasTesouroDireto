@@ -47,7 +47,7 @@ class BtnTest < Minitest::Test
     fj = 1.78954260
     result = Btn.calculate_interest(pu_at, fj)
 
-    assert_equal 205.797399, result 
+    assert_equal 205.797399, result
   end
 
   def test_should_calculate_interest
@@ -55,7 +55,23 @@ class BtnTest < Minitest::Test
     fj = 1.0
     result = Btn.calculate_interest(pu_at, fj)
 
-    assert_equal 115.000000, result 
+    assert_equal 115.000000, result
+  end
+
+  def test_should_calculate_interest_rate
+    i = 0.8
+    n = 6
+    result = Btn.calculate_interest_rate(i, n)
+
+    assert_equal 0.00399203, result
+  end
+
+  def test_should_calculate_another_interest_rate
+    i = 4
+    n = 3
+    result = Btn.calculate_interest_rate(i, n)
+
+    assert_equal 0.00985341, result
   end
 
 end
