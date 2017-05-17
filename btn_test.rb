@@ -74,4 +74,24 @@ class BtnTest < Minitest::Test
     assert_equal 0.00985341, result
   end
 
+  def test_should_calculate_main_price
+    qte = 3
+    dolar_price = 5.1294567
+    updated_price = 3.456789
+
+    result = Btn.calculate_main_price(qte, dolar_price, updated_price)
+
+    assert_equal 15.39, result
+  end
+
+  def test_should_calculate_another_main_price
+    qte = 2
+    dolar_price = 5.999999
+    updated_price = 7.123456
+
+    result = Btn.calculate_main_price(qte, dolar_price, updated_price)
+
+    assert_equal 14.25, result
+  end
+
 end
