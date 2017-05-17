@@ -6,9 +6,9 @@ class NtnATest < Minitest::Test
   def test_should_calculate_amortization_unit_price
     uss_a = 3.546
     uss_b = 2.998
-    vl = 34
+    liquid_value = 34
 
-    result = NtnA.calculate_amortization_unit_price(uss_a, uss_b, vl)
+    result = NtnA.calculate_amortization_unit_price(uss_a, uss_b, liquid_value)
 
     assert_equal 40.214810, result
   end
@@ -16,11 +16,11 @@ class NtnATest < Minitest::Test
   def test_should_calculate_another_amortization_unit_price
     uss_a = 2.3
     uss_b = 2.4
-    vl = 34
+    liquid_value = 34
 
-    result = NtnA.calculate_amortization_unit_price(uss_a, uss_b, vl)
+    result = NtnA.calculate_amortization_unit_price(uss_a, uss_b, liquid_value)
 
-    assert_equal 26.965517, result
+    assert_equal 32.583333, result
   end
 
   def test_should_calculate_liquid_value
