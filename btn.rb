@@ -15,4 +15,9 @@ class Btn
   def self.calculate_interest_rate i, n
     (((1 + (i / 100.0)) ** (n / 12.0)) - 1).round(8)
   end
+
+  def self.calculate_main_price qte, dolar_price, updated_price
+    (qte * [dolar_price.round(6), updated_price.round(6)].max).round(2)
+  end
+
 end
