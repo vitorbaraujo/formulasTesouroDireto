@@ -12,4 +12,7 @@ class Btn
     pu_at * fj
   end
 
+  def self.calculate_interest_rate i, n
+    (((1 + (i / 100.0)) ** (n / 12.0)) - 1).round(8)
+  end
 end
