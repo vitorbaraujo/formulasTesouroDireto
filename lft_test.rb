@@ -54,4 +54,44 @@ class LftTest < Minitest::Test
 
     assert_equal 0.00018530, result
   end
+
+  def test_should_calculate_nominal_value_a
+    c = 1.78985698
+    ve = 28.589654
+    tac = 0.0245
+    du = 10
+    dut = 20.0
+    pa = 19.0
+    n = 5
+    result = Lft.calculate_nominal_value_a c, ve, tac, du, dut, pa, n
+
+    assert_equal 48.272747, result
+  end
+
+  def test_should_calculate_another_nominal_value_a
+    c = 4.38565797
+    ve = 12.583654
+    tac = 0.0245
+    du = 3
+    dut = 5.0
+    pa = 10.0
+    n = 5
+    result = Lft.calculate_nominal_value_a c, ve, tac, du, dut, pa, n
+
+    assert_equal 44.364749, result
+  end
+
+  def test_should_not_change_result_if_arguments_have_more_decimals
+    c = 4.38565797
+    ve = 12.58365423242453645
+    tac = 0.0245
+    du = 3
+    dut = 5.0
+    pa = 10.0
+    n = 5
+    result = Lft.calculate_nominal_value_a c, ve, tac, du, dut, pa, n
+
+    assert_equal 44.364749, result
+  end
+
 end
