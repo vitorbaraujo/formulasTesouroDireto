@@ -1,7 +1,7 @@
 require 'bigdecimal'
 require 'bigdecimal/util'
 
-class NtnA
+class NtnA1
 
   def self.calculate_amortization_unit_price uss_a, uss_b, emission_value, amort_perc
     liquid_value = calculate_liquid_value(emission_value, amort_perc)
