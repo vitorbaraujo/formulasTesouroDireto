@@ -11,7 +11,7 @@ class NtnA3Test < Minitest::Test
 
       result = NtnA3.calculate_nominal_value(uss_a, uss_b)
 
-      assert_equal 659.750000, result
+      assert_equal 624.615384, result
   end
 
   def test_should_calculate_another_nominal_value
@@ -20,7 +20,7 @@ class NtnA3Test < Minitest::Test
 
       result = NtnA3.calculate_nominal_value(uss_a, uss_b)
 
-      assert_equal 582.085907, result
+      assert_equal 999.751341, result
   end
 
   def test_should_not_round_nominal_value_to_six_decimal_places
@@ -29,7 +29,7 @@ class NtnA3Test < Minitest::Test
 
     result = NtnA3.calculate_nominal_value(uss_a, uss_b)
 
-    assert_in_delta 582.085907, result, EPS
+    assert_in_delta 999.751341, result, EPS
   end
 
   def test_should_calculate_interest
@@ -38,7 +38,7 @@ class NtnA3Test < Minitest::Test
 
     result = NtnA3.calculate_interest(updated_nominal_value, factor)
 
-    assert_equal 2895.747367, result
+    assert_equal 2895.747578, result
   end
 
   def test_should_calculate_another_interest
@@ -65,7 +65,7 @@ class NtnA3Test < Minitest::Test
 
     result = NtnA3.calculate_interest_factor(i, n)
 
-    assert_equal 70.337097, result
+    assert_equal 0.00703370, result
   end
 
   def test_should_calculate_another_interest_factor
@@ -74,7 +74,7 @@ class NtnA3Test < Minitest::Test
 
     result = NtnA3.calculate_interest_factor(i, n)
 
-    assert_equal 449.458333, result
+    assert_equal 0.04494583, result
   end
 
 end
