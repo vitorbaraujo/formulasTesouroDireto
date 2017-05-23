@@ -55,6 +55,13 @@ class LftTest < Minitest::Test
     assert_equal 0.00018530, result
   end
 
+  def test_should_value_not_change_even_with_more_decimals
+    selic = 4.786565648
+    result = Lft.calculate_selic_tax(selic)
+
+    assert_equal 0.00018530, result
+  end
+
   def test_should_calculate_nominal_value_a
     c = 1.78985698
     ve = 28.589654
