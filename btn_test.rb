@@ -93,5 +93,4 @@ class BtnTest < Minitest::Test
 
     assert_equal 14.25, result
   end
-
 end
